@@ -9,6 +9,8 @@
         Manage C-style struct formatted fwu_metadata
 """
 
+import zlib
+
 from ctypes import Structure, c_uint32, c_uint16, c_uint8, Array
 
 from src.uuid_t import uuid_t, get_uuids, uuid_t_from_str
@@ -134,9 +136,8 @@ def generate_fwu_metadata(nb_fw_img, nb_fw_banks):
         def update_crc32(self):
             """
                 Compute and update the CRC32 from the data contained
-                NOT IMPLEMENTED
             """
-            self.crc_32 = 32  # TODO Compute CRC32
+            self.crc_32 = zlib.crc32(bytearray(self)[4:])
 
         def from_metadata(self, metadata, uuids):
             """
