@@ -393,6 +393,17 @@ class FwupdShell(Cmd):
         self.metadata["metadata"]["active_index"] = inp[0]
         self.update_fwupd_struct()
 
+
+    # SET_PREVIOUS_ACTIVE_INDEX
+    def help_set_previous_active_index(self):
+        print("Changes the previous_active_index in the metadata")
+
+    def do_set_previous_active_index(self, inp):
+        inp = expect_args(inp, 1, ["int"])
+        self.metadata["metadata"]["previous_active_index"] = inp[0]
+        self.update_fwupd_struct()
+
+
     # COMMANDS AVAILABLE ONLY ON INTERACTIVE MODE
     # CREATE_METADATA
     def help_create_metadata(self):
