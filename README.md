@@ -95,15 +95,12 @@ Severall commands can be passed in one line using comas ","
 - A list of wanted features to ease scripting with the tool should be made.
 - PEP8 rules have been applied as much as possible on the code, as well as comments & docstrings.
 
-## TODO
-- Compute real CRC32
-- Verify CRC32 of binary metadata file
-
 ## Json examples
 ### Dummy JSON metadata
 ```json
 {
     "metadata": {
+        "crc_32": 1588275002,
         "version": 0,
         "active_index": 1,
         "previous_active_index": 0,
