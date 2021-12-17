@@ -110,11 +110,11 @@ Severall commands can be passed in one line using comas ","
                 "img_bank_info": {
                     "img_0_bank_0": {
                         "accepted": true,
-                        "reserved": 101
+                        "reserved": 0
                     },
                     "img_0_bank_1": {
                         "accepted": false,
-                        "reserved": 102
+                        "reserved": 0
                     }
                 }
             }
